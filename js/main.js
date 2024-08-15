@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
 document.addEventListener("mousemove", moveParallax);
 
 function moveParallax(e) {
@@ -120,6 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Начинаем анимацию
   StartTextAnimation();
+
+  gsap.registerPlugin(ScrollTrigger);
 
   const servicesContainer = document.querySelectorAll(".services__item");
   const services = document.querySelectorAll(".services__item");
