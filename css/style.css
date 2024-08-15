@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "NeueMachina";
+  src: url("../fonts/PPNeueMachina-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "NeueMachina", Arial, sans-serif;
+  color: rgba(10, 65, 117, 1);
+  background: rgba(219, 219, 219, 1);
+}
+
+.header {
+  z-index: 2;
+  position: fixed;
+  top: 0; /* Убедитесь, что он находится в верхней части экрана */
+  width: 100%; /* Задайте ширину, чтобы он занимал всю ширину экрана */
+  display: flex;
+  justify-content: space-around; /* Распределение пространства между элементами */
+  align-items: center; /* Центрирование по вертикали */
+  padding: 19px 107px 50px; /* Примерное значение, регулируйте под свои нужды */
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__nav {
+  display: flex;
+  gap: 48px;
+  margin-right: 15%;
+}
+
+.header__link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  transition: ease-in-out 100ms;
+  margin: 0;
+  padding: 0;
+}
+
+.header__link:hover {
+  font-weight: bold;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 800px;
+  height: 620px;
+  margin-left: auto;
+  margin-right: 109px;
+  z-index: 0;
+}
+
+.about-us__heading {
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: inherit;
+  margin: 0;
+}
+
+.about-us__description {
+  font-size: 40px;
+  font-weight: inherit;
+  margin: 16px 0 24px;
+}
+
+.about-us__description_typewriter {
+  font-style: italic;
+}
+
+.about-us__start {
+  font-weight: inherit;
+  color: inherit;
+  width: 281px;
+  height: 45px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 56px;
+  border-radius: 40px;
+  border: solid 1px #0a4175;
+  background: none;
+  cursor: pointer;
+  transition: ease-in-out 200ms;
+}
+
+.about-us__start:hover {
+  background-color: #0a4175;
+  color: white;
+}
+
+.parallax-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 511.4px;
+  height: 511.4px;
+  transform: rotate(165deg);
+  filter: blur(20px);
+  background: radial-gradient(
+      52.48% 52.48% at 19.02% 93.12%,
+      #79a0ff 1.96%,
+      rgba(121, 160, 255, 0) 100%
+    ),
+    radial-gradient(
+      92.96% 92.96% at 90.32% 58.11%,
+      #ff603d 1.96%,
+      rgba(255, 96, 61, 0) 100%
+    ),
+    radial-gradient(
+      109.78% 109.78% at 5.75% 37.01%,
+      #ff93d4 0%,
+      rgba(255, 147, 212, 0) 100%
+    ),
+    linear-gradient(143.36deg, #015172 10.39%, #ff603d 47.45%, #ff93d4 86.02%);
+  border-radius: 50%;
+}
+
+.gradient-overlay {
+  z-index: 2;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 470.35px;
+  height: 470.35px;
+  gap: 0px;
+  opacity: 0.6;
+  transform: rotate(-61deg);
+  border-radius: 50%;
+  filter: blur(40px);
+  mix-blend-mode: color-dodge;
+  background: linear-gradient(
+    144.97deg,
+    #015172 -27.78%,
+    #ff603d 27.97%,
+    #ff93d4 85.99%
+  );
+}
+
+.services {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 51px;
+  column-gap: 114px;
+  margin: 100vh 72px;
+  margin-bottom: 134px;
+  color: #e5e5e5;
+  z-index: 3;
+}
+
+.services__item {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 1.5s ease-out;
+}
+
+.services__item-icon {
+  width: 72px;
+  height: 72px;
+}
+
+.services__item-heading {
+  font-size: 24px;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.services__item-description {
+  font-size: 20px;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+}
