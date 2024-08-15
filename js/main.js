@@ -1,5 +1,3 @@
-import "../css/style.css";
-
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("mousemove", moveParallax);
